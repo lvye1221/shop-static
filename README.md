@@ -20,7 +20,7 @@
 
 打开命令窗口
 ```
-mongo --dbpath=c:\mongo
+mongod --dbpath=c:\mongo
 ```
 
 2. 启动服务器
