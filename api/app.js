@@ -19,6 +19,7 @@ app.use(function (req,res,next) {
 
 	// 只
     // res.header("Access-Control-Allow-Origin", "http://127.0.0.1:3000");
+    // res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Origin", "http://hope1995.me:3000");
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
