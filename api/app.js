@@ -16,6 +16,14 @@ app.use(function (req,res,next) {
   console.log("url:"+req.originalUrl);
   //如果已经登录或者是登录接口或者是首页商品列表则放行
   if(req.cookies.userId || req.originalUrl === '/users/login' || req.originalUrl === '/users/register' || req.originalUrl.indexOf('/goods/list')>-1 || req.originalUrl.indexOf('/goods/detail')>-1){
+
+	// 只
+    // res.header("Access-Control-Allow-Origin", "http://127.0.0.1:3000");
+    res.header("Access-Control-Allow-Origin", "http://hope1995.me:3000");
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+	  
     next();
   }else{
     return res.json({
