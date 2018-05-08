@@ -3,7 +3,8 @@ let mongoose = require('mongoose');
 // mongoose.connect('mongodb://127.0.0.1:27017/xshop');
 // mongoose.connect('mongodb://127.0.0.1:27017/shop');
 // mongoose.connect('mongodb://107.191.43.142:27017/shop');
-mongoose.connect('mongodb://root:asdof879123sdjf@127.0.0.1:27017/shop');
+// mongoose.connect('mongodb://root:asdof879123sdjf@127.0.0.1:27017/shop');
+mongoose.connect('mongodb://root:asdof879123sdjf@107.191.43.142:27017/shop');
 
 mongoose.connection.on("connected", function () {//连接成功事件
   console.log("MongoDB 数据库连接 成功.")

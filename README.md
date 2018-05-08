@@ -43,18 +43,22 @@ node bin\www
 ## 密码设置
 
 
+# 添加一个管理员账户
+
 ```
+// 先进入数据库
+mongo
+
+// 使用数据库
 use shop
 
-db.system.users.find() #查看system.users里面的用户数据
+// 显示所有角色
+show roles
 
-----
-#添加一个管理员账户
-db.addUser('root','asdof879123sdjf'); 
+// 创建用户
+db.createUser({user:'root',pwd:'root1234',roles:[{role:'dbOwner',db:'shop'}]})
 
-db.auth('root','asdof879123sdjf'); 
+// 授权数据库
+db.auth('root','root1234'); 
+
 ```
-
-
-
-
