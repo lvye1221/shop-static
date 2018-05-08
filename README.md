@@ -38,3 +38,23 @@ node bin\www
 ```
 
 
+# MongoDB
+
+## 密码设置
+
+
+```
+use shop
+
+db.system.users.find() #查看system.users里面的用户数据
+
+----
+#添加一个管理员账户
+db.addUser('root','asdof879123sdjf'); 
+
+db.auth('root','asdof879123sdjf'); 
+```
+
+
+
+
